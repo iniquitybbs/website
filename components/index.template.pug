@@ -1,0 +1,214 @@
+doctype html
+html(lang="en")
+    head
+        title BitTubers
+
+        link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Anton", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Play", rel="stylesheet")
+
+        link(href="/node_modules/vuetify/dist/vuetify.min.css", rel="stylesheet")
+
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        style
+            include:less index.style.less
+
+    body(style="display: none;background-color: #212121;")
+
+        // BitTubers Application
+
+        bittubers#index
+
+            v-app(dark)
+
+                v-toolbar.light-grey
+
+                    toolbar_logo(onclick="javascript:window.location='/index';", style="cursor: pointer;")
+
+                        span(style="font-family: 'Anton', sans-serif;margin-left: 3.5px;font-size: 30pt;") Iniquity BBS
+
+                    v-spacer
+
+                    // Component Navigation
+
+                    v-toolbar-side-icon.hidden-md-and-up
+
+                    v-toolbar-items.hidden-sm-and-down
+                        v-btn(flat href="/blog") Blog
+                        v-btn(flat href="/platform") Platform
+                        v-btn(flat href="/account") Account
+
+                v-content(fluid)
+
+                    #dynamic1(v-for="number in [currentNumber]" :key="number" transition="fade")
+                        v-parallax(:src="images[Math.abs(currentNumber) % images.length]", height="600")
+
+                            v-layout(column, align-center, justify-center, class="white--text")
+
+                                .text-xs-center
+
+                                    span(style="font-family: 'Anton', sans-serif;margin-left: 3.5px;font-size: 70pt;text-shadow: 2px 2px 2px #222;") Iniquity BBS
+
+                                    #getting-started(style="font-size: x-large;")
+
+                                <h1 class="white--text mb-2 display-3 text-xs-center">Supporting your favorite YouTuber's just got a whole lot more profitable.</h1>
+                                // h1(class="white--text mb-2 display-1 text-xs-center") The easiet way to invest in digital assets while crowd funding your favorite YouTubers.
+
+                                .text-xs-center
+                                    v-btn(class="red darken-2 mt-1", dark, large, href="/pre-made-themes") Learn More
+                                    v-btn(class="red darken-2 mt-1", dark, large, href="#subscribe_anchor") Subscribe
+
+                    v-container
+
+                        .text-xs-center
+
+                            .headline.white--text
+                                h2 An example video about crypto currencies!
+                            br
+
+                            <iframe width="90%" height="480" src="https://www.youtube.com/embed/GWKl6efhokg?rel=0&autoplay=0" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+
+                            // v-carousel(hide-controls)
+                                v-carousel-item(src="https://s-media-cache-ak0.pinimg.com/originals/64/15/8c/64158c807a9f5ee14170b9b692a57986.jpg")
+                                v-carousel-item(src="http://newscult.com/wp-content/uploads/2016/12/youtubers.jpeg")
+                                v-carousel-item(src="https://thedowntowntea.com/wp-content/uploads/2015/11/youtubers_by_veronicazoo-d7pw4fb.jpg")
+
+                    v-container
+
+                        h1 What's This?
+                        p Ut adipisicing nisi tempor anim sit ipsum amet consequat qui velit tempor laborum velit. Eiusmod ut qui excepteur ea ut excepteur minim sit consectetur nulla tempor. Elit velit consectetur aute proident fugiat esse. Irure eu excepteur in minim velit in non et proident nisi laboris adipisicing magna id.
+
+                    v-container
+
+                        h1 Investment Plans
+                        p Ut adipisicing nisi tempor anim sit ipsum amet consequat qui velit tempor laborum velit. Eiusmod ut qui excepteur ea ut excepteur minim sit consectetur nulla tempor. Elit velit consectetur aute proident fugiat esse. Irure eu excepteur in minim velit in non et proident nisi laboris adipisicing magna id.
+
+                    v-container
+
+                        h1 $1000 Give Away!
+                        p Ut adipisicing nisi tempor anim sit ipsum amet consequat qui velit tempor laborum velit. Eiusmod ut qui excepteur ea ut excepteur minim sit consectetur nulla tempor. Elit velit consectetur aute proident fugiat esse. Irure eu excepteur in minim velit in non et proident nisi laboris adipisicing magna id.
+
+                    v-container
+
+                        section
+                            v-layout.my-5(column, wrap, align-center)
+                                v-flex.my-3(xs12, sm4)
+                                    v-card-title.layout.justify-center.white--text(primary-title)
+                                        .headline.mb-0.text-xs-center
+                                            h1 BitTubers Core Team
+                                v-flex(xs12)
+                                        v-container(grid-list-xl)
+                                                v-layout(row,wrap,align-center)
+                                                    v-flex(xs12, md3)
+                                                        v-card.elevation-0.transparent
+                                                            v-card-text.text-xs-center
+                                                                v-avatar(size="200px",slot="activator")
+                                                                    img(src="/static/images/image5.jpg", alt="")
+                                                            v-card-title.layout.justify-center(primary-title)
+                                                                .headline.mb-0.text-xs-center Art Glass
+                                                            .text-xs-center
+                                                                strong.white--text Business
+                                                            v-card-text
+                                                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+                                                    v-flex(xs12, md3)
+                                                        v-card.elevation-0.transparent
+                                                            v-card-text.text-xs-center
+                                                                v-avatar(size="200px",slot="activator")
+                                                                    img(src="/static/images/image1.jpg", alt="")
+                                                            v-card-title.layout.justify-center(primary-title)
+                                                                .headline.mb-0.text-xs-center Dan Stephenson
+                                                            .text-xs-center
+                                                                strong.white--text Technology
+                                                            v-card-text
+                                                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+                                                    v-flex(xs12, md3)
+                                                        v-card.elevation-0.transparent
+                                                            v-card-text.text-xs-center
+                                                               v-avatar(size="200px",slot="activator")
+                                                                    img(src="/static/images/image5.jpg", alt="")
+                                                            v-card-title.layout.justify-center(primary-title)
+                                                                .headline.mb-0.text-xs-center Shahzain Ali
+                                                            .text-xs-center
+                                                                strong.white--text Legal
+                                                            v-card-text
+                                                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+                                                    v-flex(xs12, md3)
+                                                        v-card.elevation-0.transparent
+                                                            v-card-text.text-xs-center
+                                                                v-avatar(size="200px",slot="activator")
+                                                                    img(src="/static/images/image1.jpg", alt="")
+                                                            v-card-title.layout.justify-center(primary-title)
+                                                                .headline.mb-0.text-xs-center Suzana Imparato
+                                                            .text-xs-center
+                                                                strong.white--text Support
+                                                            v-card-text
+                                                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+
+                    v-container
+
+                        h1.white--text What we are
+                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        p The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                    v-container
+
+                        h1.white--text  How we work
+                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        p The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+                    v-container
+
+                        v-container(fluid grid-list-sm)
+                            v-layout( row wrap, style="background:white;")
+                                v-flex(xs4, v-for="i in 3" :key="i")
+                                    img(v-bind:src="`/static/logo/${i}logo.png`" alt="lorem" style="margin-top:5%;width:70%;margin-left:20%;")
+
+                    v-container(id="#subscribe_anchor")
+                        v-flex(xs12)
+                                v-card.elevation-0.transparent
+                                    v-card-title.layout.justify-center(primary-title)
+                                        .headline.mb-0.text-xs-center.white--text
+                                            h2 Subscribe
+                                            v-card-text.white--text
+                                                h6 Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
+                                    #form_dat(align="center")
+                                        v-flex(xs6)
+                                            form
+                                                v-text-field(label="Name" v-model="name")
+                                                v-text-field(label="E-mail" v-model="email")
+                                                v-text-field(v-model="message" label="Message" textarea dark)
+                                                v-btn(@click="submit") Submit
+                                                v-btn(@click="clear") Clear
+
+                v-footer.red.darken-2.fluid
+                    v-layout.row.wrap.align-center
+                        v-flex.xs12
+                            .white--text.ml-3 &copy; 2018 BitTubers, LLC.
+
+        // Vue / Vuetify Setup
+
+        script(src="/node_modules/vue/dist/vue.js")
+        script(src="/node_modules/vuetify/dist/vuetify.js")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js")
+        script(src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js")
+
+        script.
+            $(document).ready(function() {
+                // $('*').hide()
+                //$('body').each(function() {
+                $("body").fadeIn(2000)
+                //})
+            })
+        script.
+            $("#getting-started").countdown("2018/03/01", function(event) {
+                $(this).text(event.strftime('Public Beta in %D Days!'));
+            });
+
+        script
+            include:typescript index.component.ts
