@@ -32,10 +32,8 @@ html(lang="en")
 
                     // Component Navigation
 
-                    v-toolbar-side-icon.hidden-md-and-up
-
                     v-toolbar-items.hidden-sm-and-down
-                        v-btn(flat href="https://github.com/iniquitybbs" target="_blank") GitHub
+                        v-btn(flat href="https://github.com/iniquitybbs/iniquity" target="_blank") GitHub
                         v-btn(flat href="https://rubygems.org/gems/iniquity" target="_blank") RubyGems
                         v-btn(flat href="https://github.com/iniquitybbs/iniquity/tree/master/doc" target="_blank") Documentation
 
@@ -50,15 +48,14 @@ html(lang="en")
 
                     broadcast(v-on:click="show_broadcasts = !show_broadcasts")
                         transition(name="fade")
-                            v-alert(v-if="show_broadcasts", color="info", icon="priority_high", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
+                            v-alert(v-if="show_broadcasts", color="info", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
 
-                    v-flex(xs12)
+                    v-flex
                         v-layout(row wrap)
-                            v-flex(xs8)
-                                v-flex(xs12 style="margin-left:5%;")
+                            v-flex()
+                                v-flex(xs12 style="margin-left:5%;margin-right:5%;")
                                     div(v-for="post in posts" :key="post.title")
                                         v-card(class="my-3", hover)
-                                            // v-card-media(class="white--text", height="auto", :src="post.imgUrl")
                                             v-container(fluid)
                                                 v-layout(row wrap)
                                                     v-flex(xs12, align-end, flexbox)
@@ -70,7 +67,7 @@ html(lang="en")
 
                                                     p {{ post.content }}
 
-                            v-flex(xs4)
+                            // v-flex(xs4)
                                 v-flex(xs10 offset-md1 style="margin-top:4%;")
                                     v-sidebar(fixed v-model="nav2")
                                         v-list
@@ -85,7 +82,7 @@ html(lang="en")
                 v-footer.blue.darken-2.fluid
                     v-layout.row.wrap.align-center
                         v-flex.xs12
-                            .white--text.ml-3 &copy; 2017 - 2018 Dan Stephenson (ispyhumanfly)
+                            .white--text.ml-3 2017 - 2018 Dan Stephenson (ispyhumanfly)
 
         // Blog Component File Setup
 
@@ -124,37 +121,37 @@ html(lang="en")
                         posts: [
                             {
                                 title: 'Fusce ullamcorper tellus',
-                                author: 'Art Glass',
+                                author: 'ispyhumanfly',
                                 content: 'Enim incididunt cupidatat et proident id pariatur consectetur sint. Ad enim et mollit occaecat id commodo officia. Ipsum sunt deserunt mollit proident eiusmod. Est exercitation labore non laboris aute incididunt sunt anim proident est elit cillum. Labore irure pariatur qui elit nisi est. Sint Lorem magna ullamco est proident minim minim occaecat consequat sint amet dolor. Elit sint nostrud eu irure veniam et dolor minim sint dolore non est. Ea tempor eu Lorem excepteur consectetur. Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna. Esse ea nulla reprehenderit ullamco dolore do pariatur anim proident mollit. Duis cillum mollit id ex nostrud occaecat pariatur mollit labore in minim. Pariatur sunt adipisicing officia eiusmod aliquip aliquip. Cillum veniam magna incididunt velit mollit cupidatat. Laborum exercitation voluptate sunt ex magna incididunt consectetur mollit velit ullamco. ',
                                 imgUrl: 'https://www.w3schools.com/w3images/lights.jpg'
                             },
                             {
                                 title: 'Donec vitae suscipit lectus, a luctus diam.',
-                                author: 'Dan Stephenson',
+                                author: 'ispyhumanfly',
                                 content: 'Adipisicing deserunt minim aliquip mollit sit in qui in culpa. Voluptate deserunt velit consequat nulla occaecat qui enim aliquip esse est ea occaecat. Ipsum eu id consequat ipsum sunt ullamco magna anim ex do exercitation pariatur. Culpa laboris dolor laboris amet elit enim aliquip amet eiusmod tempor. Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
                                 imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg'
                             },
                             {
                                 title: 'Vestibulum condimentum quam',
-                                author: 'Dan Stephenson',
+                                author: 'ispyhumanfly',
                                 content: 'Voluptate non quis cillum incididunt et mollit. Et est aute consequat excepteur laborum esse sunt cupidatat sit. Ad laborum id commodo ea proident aliqua aute occaecat commodo ut dolore mollit nulla. At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.',
                                 imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/plane.jpg'
                             },
                             {
                                 title: 'Fusce ullamcorper tellus',
-                                author: 'Art Glass',
+                                author: 'ispyhumanfly',
                                 content: 'Aliquip cupidatat voluptate et ipsum officia cillum consequat sit. Qui velit amet quis nostrud proident velit tempor nulla ipsum est laborum. Tempor officia dolor quis aute in anim ut sit. Eiusmod cupidatat est dolore consequat dolore occaecat ut dolore duis. Exercitation esse elit Lorem aliquip voluptate. Elit nostrud nulla laboris eu laboris veniam nostrud anim fugiat dolor. Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
                                 imgUrl: 'https://www.w3schools.com/w3images/lights.jpg'
                             },
                             {
                                 title: 'Donec vitae suscipit lectus, a luctus diam.',
-                                author: 'Dan Stephenson',
+                                author: 'ispyhumanfly',
                                 content: 'Dolore nulla velit sunt quis anim. Velit ea veniam et duis. Tempor in sit ut nisi labore. Qui amet tempor deserunt magna. Eu officia commodo nostrud irure Lorem quis fugiat fugiat. Minim reprehenderit proident eiusmod Lorem. Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
                                 imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg'
                             },
                             {
                                 title: 'Vestibulum condimentum quam',
-                                author: 'Dan Stephenson',
+                                author: 'ispyhumanfly',
                                 content: 'At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.',
                                 imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/plane.jpg'
                             }
