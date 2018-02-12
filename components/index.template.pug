@@ -23,9 +23,11 @@ html(lang="en")
 
             v-app(dark)
 
-                v-toolbar.light-grey
+                v-toolbar.black
 
                     toolbar_logo(onclick="javascript:window.location='/';", style="cursor: pointer;")
+
+                        img(src="/assets/images/iq.png", style="height: 50px; margin-bottom: -10px;position: relative;")
                         span(style="margin-left: 3.5px;").dos-logo Iniquity BBS
 
                     v-spacer
@@ -62,7 +64,7 @@ html(lang="en")
 
                                                     p.dos-smallest {{ post.author }}
 
-                v-footer.blue.darken-2.fluid
+                v-footer.black.fluid
                     v-layout.row.wrap.align-center
                         v-flex.xs12
                             .white--text.ml-3.dos-smallest 2017 - 2018 Dan Stephenson (ispyhumanfly)
