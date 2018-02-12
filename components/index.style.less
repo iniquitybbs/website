@@ -6,15 +6,46 @@
   font-style: normal;
 }
 
-* {
-  font-family: '8x16' !important;
+@dos-font: '8x16' !important;
+
+.dos-smallest {
+  font-family: @dos-font;
+  font-size: 6pt;
 }
 
-h1, h2 {
-    text-shadow: 2px 2px 5px  #222;
-    font-family: '8x16';
+.dos-smaller {
+  font-family: @dos-font;
+  font-size: smaller;
+}
+.dos-small {
+  font-family: @dos-font;
+  font-size: small;
 }
 
+.dos-medium {
+  font-family: @dos-font;
+  font-size: medium;
+}
+
+.dos-large {
+  font-family: @dos-font;
+  font-size: large;
+}
+
+.dos-larger {
+  font-family: @dos-font;
+  font-size: larger;
+}
+
+.dos-logo {
+  font-family: @dos-font;
+  font-size: 10pt;
+}
+
+.dos-title {
+  font-family: @dos-font;
+  font-size: 1pt;
+}
 // Alert experiment...
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;

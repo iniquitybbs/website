@@ -23,66 +23,49 @@ html(lang="en")
 
             v-app(dark)
 
-                v-toolbar.light-grey(fixed)
+                v-toolbar.light-grey
 
                     toolbar_logo(onclick="javascript:window.location='/';", style="cursor: pointer;")
-                        span(style="font-family: 'Anton', sans-serif;margin-left: 3.5px;font-size: 30pt;") Iniquity BBS
+                        span(style="margin-left: 3.5px;").dos-logo Iniquity BBS
 
                     v-spacer
 
                     // Component Navigation
 
                     v-toolbar-items.hidden-sm-and-down
-                        v-btn(flat href="https://github.com/iniquitybbs/iniquity" target="_blank") GitHub
-                        v-btn(flat href="https://rubygems.org/gems/iniquity" target="_blank") RubyGems
-                        v-btn(flat href="https://github.com/iniquitybbs/iniquity/tree/master/doc" target="_blank") Documentation
+                        v-btn(flat href="https://github.com/iniquitybbs/iniquity" target="_blank").dos-smallest GitHub
+                        v-btn(flat href="https://rubygems.org/gems/iniquity" target="_blank").dos-smallest RubyGems
+                        v-btn(flat href="https://github.com/iniquitybbs/iniquity/tree/master/doc" target="_blank").dos-smallest Documentation
 
                         // storage(style="margin-top: 8px;", v-for="item in navigation")
                                 v-btn(flat) {{ item.title }}
 
                 v-content(fluid)
 
-                    br
-                    br
-                    br
-
                     broadcast(v-on:click="show_broadcasts = !show_broadcasts")
                         transition(name="fade")
-                            v-alert(v-if="show_broadcasts", color="info", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
+                            v-alert.dos-smallest(v-if="show_broadcasts", color="info", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
 
                     v-flex
                         v-layout(row wrap)
-                            v-flex()
-                                v-flex(xs12 style="margin-left:5%;margin-right:5%;")
-                                    div(v-for="post in posts" :key="post.title")
-                                        v-card(class="my-3", hover)
-                                            v-container(fluid)
-                                                v-layout(row wrap)
-                                                    v-flex(xs12, align-end, flexbox)
-                                                        v-avatar
-                                                            img(src="https://avatars3.githubusercontent.com/u/198764?s=460&v=4" alt="John")
+                            v-flex(xs12 style="margin-left:5%;margin-right:5%;")
+                                div(v-for="post in posts" :key="post.title")
+                                    v-card(class="my-3", hover)
+                                        v-container(fluid)
+                                            v-layout.row.wrap
+                                                v-flex(xs12, align-end, flexbox)
 
-                                                        span(class="headline", style="margin-left:2%;") {{ post.title }}
-                                                        p {{ post.author }}
+                                                    h1.dos-small {{ post.title }}
+                                                    br
 
-                                                    p {{ post.content }}
+                                                    p.dos-smallest {{ post.content }}
 
-                            // v-flex(xs4)
-                                v-flex(xs10 offset-md1 style="margin-top:4%;")
-                                    v-sidebar(fixed v-model="nav2")
-                                        v-list
-                                            v-list-item(v-for="post in posts" :key="post")
-                                                v-list-tile
-                                                    v-avatar
-                                                        img(src="https://avatars3.githubusercontent.com/u/198764?s=460&v=4" alt="John")
-                                                    v-list-tile-title {{ post.title }}
-                                                br
-
+                                                    p.dos-smaller {{ post.author }}
 
                 v-footer.blue.darken-2.fluid
                     v-layout.row.wrap.align-center
                         v-flex.xs12
-                            .white--text.ml-3 2017 - 2018 Dan Stephenson (ispyhumanfly)
+                            .white--text.ml-3.dos-smallest 2017 - 2018 Dan Stephenson (ispyhumanfly)
 
         // Blog Component File Setup
 
@@ -120,7 +103,7 @@ html(lang="en")
                         ],
                         posts: [
                             {
-                                title: 'Fusce ullamcorper tellus',
+                                title: 'Welcome to the Iniquity BBS website.',
                                 author: 'ispyhumanfly',
                                 content: 'Enim incididunt cupidatat et proident id pariatur consectetur sint. Ad enim et mollit occaecat id commodo officia. Ipsum sunt deserunt mollit proident eiusmod. Est exercitation labore non laboris aute incididunt sunt anim proident est elit cillum. Labore irure pariatur qui elit nisi est. Sint Lorem magna ullamco est proident minim minim occaecat consequat sint amet dolor. Elit sint nostrud eu irure veniam et dolor minim sint dolore non est. Ea tempor eu Lorem excepteur consectetur. Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna. Esse ea nulla reprehenderit ullamco dolore do pariatur anim proident mollit. Duis cillum mollit id ex nostrud occaecat pariatur mollit labore in minim. Pariatur sunt adipisicing officia eiusmod aliquip aliquip. Cillum veniam magna incididunt velit mollit cupidatat. Laborum exercitation voluptate sunt ex magna incididunt consectetur mollit velit ullamco. ',
                                 imgUrl: 'https://www.w3schools.com/w3images/lights.jpg'
