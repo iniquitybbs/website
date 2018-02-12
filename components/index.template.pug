@@ -53,14 +53,14 @@ html(lang="en")
                                     v-card(class="my-3", hover)
                                         v-container(fluid)
                                             v-layout.row.wrap
-                                                v-flex(xs12, align-end, flexbox)
+                                                v-flex(xs12, align-end, flexbox, style="padding: 10px;").black
 
                                                     h1.dos-small {{ post.title }}
                                                     br
 
                                                     p.dos-smallest {{ post.content }}
 
-                                                    p.dos-smaller {{ post.author }}
+                                                    p.dos-smallest {{ post.author }}
 
                 v-footer.blue.darken-2.fluid
                     v-layout.row.wrap.align-center
