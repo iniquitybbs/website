@@ -1,18 +1,24 @@
-body{
-	
+@font-face {
+  font-family: '8x16';
+  src: url('/assets/fonts/dos437-webfont.woff');
+  src: local('Ã¢ËœÂº'), url('/assets/fonts/dos437-webfont.woff') format('woff'), url('/assets/fonts/dos437-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+* {
+  font-family: '8x16' !important;
+}
+
 h1, h2 {
-		text-shadow: 2px 2px 5px  #222;
-		font-family: 'Play', sans-serif;
+    text-shadow: 2px 2px 5px  #222;
+    font-family: '8x16';
 }
+
+// Alert experiment...
 .fade-enter-active, .fade-leave-active {
-  	transition: all 0.8s ease;
-	overflow: hidden;
-	visibility: visible;
-	opacity: 1;
-	position: absolute;
-}
-.fade-enter, .fade-leave-to  {
-	opacity: 0;
-	visibility: hidden;
-}
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }

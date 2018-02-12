@@ -1,11 +1,34 @@
-{ "objects":
-    [
-        { "header": "Today" },
-        { "avatar": "https://i.pinimg.com/originals/64/15/8c/64158c807a9f5ee14170b9b692a57986.jpg", "title": "Brunch this weekend?", "subtitle": "<span class='grey--text text--darken-2'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out" },
-        { "divider": true, "inset": true },
-        { "avatar": "https://thedowntowntea.com/wp-content/uploads/2015/11/youtubers_by_veronicazoo-d7pw4fb.jpg", "title": "Summer BBQ <span class='grey--text text--lighten-1'>4</span>", "subtitle": "<span class='grey--text text--darken-2'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend." },
-        { "divider": true, "inset": true },
-        { "avatar": "http://newscult.com/wp-content/uploads/2016/12/youtubers.jpeg", "title": "Oui oui", "subtitle": "<span class='grey--text text--darken-2'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?" }
+{ "objects": [{
+    "navigation": [
+        {
+            "title": "Index",
+            "url": "/index"
+        },
+        {
+            "title": "Platform",
+            "url": "/platform"
+        },
+        {
+            "title": "Account",
+            "url": "/account"
+        }
+    ],
+    "posts": [
+        {
+            "title": "Fusce ullamcorper tellus",
+            "content": "Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.",
+            "imgUrl": "https://www.w3schools.com/w3images/lights.jpg"
+        },
+        {
+            "title": "Donec vitae suscipit lectus, a luctus diam.",
+            "content": "Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.",
+            "imgUrl": "https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg"
+        },
+        {
+            "title": "Vestibulum condimentum quam",
+            "content": "At sagittis sapien vulputate. Vivamus laoreet lacus id magna rutrum dapibus. Donec vel pellentesque arcu. Maecenas mollis odio tempus felis elementum commodo.",
+            "imgUrl": "https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/plane.jpg"
+        }
     ]
+}]
 }
-
