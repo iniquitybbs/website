@@ -34,7 +34,7 @@ html(lang="en")
 
                     // Component Navigation
 
-                    v-toolbar-items.hidden-sm-and-down
+                    v-toolbar-items
                         v-btn(flat href="https://github.com/iniquitybbs/iniquity" target="_blank").dos-smallest GitHub
                         v-btn(flat href="https://rubygems.org/gems/iniquity" target="_blank").dos-smallest RubyGems
                         v-btn(flat href="https://github.com/iniquitybbs/iniquity/tree/master/doc" target="_blank").dos-smallest Documentation
@@ -48,7 +48,6 @@ html(lang="en")
                         transition(name="fade")
                             v-alert.dos-smallest(v-if="show_broadcasts", color="info", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
 
-                    v-flex
                         v-layout(row wrap)
                             v-flex(xs12 style="margin-left:5%;margin-right:5%;")
                                 div(v-for="post in posts" :key="post.title")
@@ -63,6 +62,16 @@ html(lang="en")
                                                     p.dos-smallest {{ post.content }}
 
                                                     p.dos-smallest {{ post.author }}
+
+                            // v-flex(xs4)
+                                v-flex(xs10 offset-md1 style="margin-top:4%;")
+                                    v-sidebar(fixed v-model="nav2")
+                                        v-list
+                                            v-list-item(v-for="post in posts" :key="post")
+                                                v-list-tile
+                                                    // v-avatar
+                                                        img(src="/static/images/image5.jpg" alt="ispyhumanfly")
+                                                    v-list-tile-title {{ post.title }}
 
                 v-footer.black.fluid
                     v-layout.row.wrap.align-center
