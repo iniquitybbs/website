@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>Iniquity BBS Demonstration</title>
+        <style>
+            html, body { margin: 0; height: 100%; }
+            html, body, iframe { overflow: hidden; }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                //$("iframe").hide()
+                $("body").each(function() {
+                    $(this).fadeIn(10000);
+                });
+            });
+        </script>
+    </head>
+
+    <body
+          style =
+            "background-color: black;
+            min-height: 675px;
+            min-width: 1024px; display: none;" scroll="no">
+
+        <div
+             style =
+                "margin: auto;
+                text-align: center;
+                width: 720px;
+                height: 15px;
+                border-bottom: solid 1px black;">
+        </div>
+
+
+        <div
+             style =
+                "margin: auto;
+                text-align: center;">
+
+            <iframe
+                    src="http://embed.ftelnet.ca/?Hostname=iniquitybbs.org&Port=23&Proxy=proxy-us-ga.ftelnet.ca&ProxyPort=1123&ProxyPortSecure=11235&AutoConnect=true&ConnectionType=telnet&Emulation=ansi-bbs&TopButtons=false&VirtualKeyboard=off#"
+                    height=700
+                    width=1024
+                    seamless=true
+                    frameborder=0
+                    scrolling="no"
+                    style="border: hidden;">
+            </iframe>
+        </div>
+
+        <div
+             style =
+                "background-color: black;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                height: 100px;
+                min-width: 720px;
+                width: 100%;
+                z-index: 1;
+                position: absolute;
+                margin-top: -135px;">
+
+                <div
+                     style =
+                        "margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 15px;
+                        text-align: center;
+                        width: 720px;
+                        height: 15px;
+                        border-top: solid 1px black;">
+
+                </div>
+        </div>
+    </body>
+</html>
+
