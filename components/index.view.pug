@@ -1,0 +1,72 @@
+doctype html
+html(lang="en")
+    head
+        title The Iniquity Bulletin Board System
+
+        link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Anton", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Play", rel="stylesheet")
+
+        link(href="/node_modules/vuetify/dist/vuetify.min.css", rel="stylesheet")
+
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+
+        style
+            include:less index.style.less
+
+    body
+
+        // Iniquity BBS Application
+
+        v-app(id="index" dark v-cloak)
+
+            v-toolbar.black
+
+                toolbar_logo(onclick="javascript:window.location='/';", style="cursor: pointer;")
+
+                    img(src="/assets/images/iq.png", style="height: 50px; margin-bottom: -10px;position: relative;")
+                    span(style="margin-left: 3.5px;").dos-logo Iniquity BBS
+
+                v-spacer
+
+                // Component Navigation
+
+                v-toolbar-items
+                    v-btn(flat href="/assets/html/iqterm.html" target="_blank").dos-smallest Demo
+                    v-btn(flat href="https://github.com/iniquitybbs/iniquity" target="_blank").dos-smallest GitHub
+                    v-btn(flat href="https://rubygems.org/gems/iniquity" target="_blank").dos-smallest RubyGems
+                    v-btn(flat href="https://github.com/iniquitybbs/iniquity/tree/master/doc" target="_blank").dos-smallest Documentation
+
+                    // storage(style="margin-top: 8px;", v-for="item in navigation")
+                            v-btn(flat) {{ item.title }}
+
+            v-content(fluid)
+
+                broadcast(v-on:click="show_broadcasts = !show_broadcasts")
+                    transition(name="fade")
+                        v-alert.dos-smallest(v-if="show_broadcasts", color="info", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
+
+                    v-layout(row wrap)
+                        v-flex(xs12 style="margin-left:5%;margin-right:5%;")
+                            div(v-for="post in posts" :key="post.title")
+                                v-card(class="my-3", hover)
+                                    v-container(fluid)
+                                        v-layout.row.wrap
+                                            v-flex(xs12, align-end, flexbox, style="padding: 10px;").black
+
+                                                h1.dos-small {{ post.title }}
+                                                br
+
+                                                p.dos-smallest {{ post.content }}
+
+                                                p.dos-smallest {{ post.author }}
+
+            v-footer.black.fluid
+                v-layout.row.wrap.align-center
+                    v-flex.xs12
+                        .white--text.ml-3.dos-smallest 1991 - 2018 The Iniquity BBS Project
+
+        // Componenent File
+
+        script(src="/index.component.bundle.js")
