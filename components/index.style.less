@@ -12,7 +12,15 @@ body {
 }
 
 @dos-font: '8x16' !important;
-[v-cloak] {display: none}
+
+[v-cloak] > * {display: none}
+[v-cloak]::before { 
+  font-family: @dos-font;
+  font-size: large;
+  color: white;
+  content: "Loading...";
+}
+
 .dos-smallest {
   font-family: @dos-font;
   font-size: 6pt;
