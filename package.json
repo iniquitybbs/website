@@ -20,6 +20,7 @@
   "dependencies": {
     "@types/vue": "^2.0.0",
     "avian": "https://github.com/flypapertech/avian.git",
+    "axios": "^0.18.0",
     "vue": "^2.5.17",
     "vuetify": "^1.2.3"
   }

@@ -45,7 +45,7 @@ html(lang="en")
 
                 broadcast(v-on:click="show_broadcasts = !show_broadcasts")
                     transition(name="fade")
-                        v-alert.dos-smallest(v-if="show_broadcasts", color="info", value="true") You are viewing a development version of the Iniquity BBS website. Please check back for updates.
+                        v-alert.dos-smallest(v-if="show_broadcasts", color="info", value="true").text-xs-center You are viewing a development version of the Iniquity BBS website. Please check back for updates.
 
                     v-layout(row wrap)
                         v-flex(xs12 style="margin-left:5%;margin-right:5%;")

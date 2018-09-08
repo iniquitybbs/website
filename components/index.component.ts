@@ -1,6 +1,8 @@
 // Index Component
 import * as Vue from "vue/dist/vue"
 import * as Vuetify from "vuetify"
+import * as Axios from "axios"
+
 Vue.use(Vuetify)
 
 new Vue({
