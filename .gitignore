@@ -3,8 +3,6 @@ cache
 logs
 private
 public
-.vscode
 node_modules
 npm-debug.log
-.vscode
 dump.rdb
