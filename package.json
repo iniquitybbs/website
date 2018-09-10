@@ -2,10 +2,11 @@
   "name": "iniquity-website",
   "version": "1.0.0",
   "description": "The iniquitybbs.org website source code.",
-  "main": "node node_modules/.bin/avian",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node_modules/.bin/avian"
+    "start": "node node_modules/.bin/concurrently -k --restart-tries 10 --raw \"yarn avian\"",
+    "start-prod": "node node_modules/.bin/concurrently -k --restart-tries 25 --raw \"yarn avian\"",
+    "avian": "node node_modules/.bin/avian",
+    "avian-prod": "node node_modules/.bin/avian --mode production --name iniquity-website --port 80"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,12 @@
   },
   "homepage": "https://github.com/iniquitybbs/website#readme",
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "@types/vue": "^2.0.0",
     "avian": "https://github.com/flypapertech/avian.git",
     "axios": "^0.18.0",
+    "concurrently": "^4.0.1",
+    "markdown-it": "^8.4.2",
     "vue": "^2.5.17",
     "vuetify": "^1.2.3"
   }
