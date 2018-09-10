@@ -2,17 +2,31 @@
 
 A retro style website for publishing project updates about the Iniquity BBS.
 
-## Synopsis
+# Synopsis
+
+## Installation
 
     yarn install
 
-## Documentation
+## Avian Development Mode
 
-https://github.com/iniquitybbs/website/docs/index.doc.html
+    avian --home /path/to/app --mode development
 
-## Issues
+## Avian Production Mode
+
+    avian --home /path/to/app --mode production --name iniquity-website --port 80
+
+# Developer Documentation
+
+http://localhost:8080/index.doc.html
+
+# Issues
 
 https://github.com/iniquitybbs/website/issues
-## License
+
+# Authors
+Dan Stephenson (ispyhumanfly)
+
+# License
 
 MIT

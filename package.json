@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "The iniquitybbs.org website source code.",
   "scripts": {
-    "start": "node node_modules/.bin/concurrently -k --restart-tries 10 --raw \"yarn avian\"",
-    "start-prod": "node node_modules/.bin/concurrently -k --restart-tries 25 --raw \"yarn avian\"",
+    "start": "node node_modules/.bin/concurrently -k --restart-tries 10 --raw \"yarn avian\" \"yarn pandoc\"",
     "avian": "node node_modules/.bin/avian",
-    "avian-prod": "node node_modules/.bin/avian --mode production --name iniquity-website --port 80",
-    "pandoc": "pandoc ./components/*.doc.md -s --toc -c /assets/css/pandoc.css --title 'Index Documentation' --from markdown --to html5 -o ./public/index.doc.html"
+    "pandoc": "pandoc ./components/index.doc.md -s --toc -c /assets/css/pandoc.css --from markdown --to html5 -o ./assets/html/docs/index.doc.html"
   },
   "repository": {
     "type": "git",
@@ -28,6 +26,7 @@
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
     "markdown-it-table-of-contents": "^0.4.3",
+    "pandoc": "^0.2.0",
     "vue": "^2.5.17",
     "vuetify": "^1.2.3"
   }

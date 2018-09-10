@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Index Component Documentation</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="/assets/css/pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Index Component Documentation</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#component-files">Component Files</a><ul>
+<li><a href="#index.view.pugejshtml">index.view.(pug/ejs/html)</a></li>
+<li><a href="#index.component.tsjs">index.component.(ts/js)</a></li>
+<li><a href="#index.style.lesscsssassstylus">index.style.(less/css/sass/stylus)</a></li>
+<li><a href="#index.config.json">index.config.json</a></li>
+<li><a href="#index.service.tsjs">index.service.(ts/js)</a></li>
+<li><a href="#index.doc.md">index.doc.md</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="introduction">Introduction</h1>
+<p>Avian’s Index component is the main entry point to your application. Every application requires its existence, and should be seen as the initial building block of any simple to large scale application. For single page applications, this is typically the only component your application will require. Avian generally supports your component files being written in the language of your choosing, with only a few known exceptions.</p>
+<h1 id="component-files">Component Files</h1>
+<p>Avian applications follow a component driven design pattern. The components themselves are modular in such a way where a developer can pick and choose which component files to leverage.can be comprised of any combination of the below mentioned supporting files depending on your needs and the kind of component you are creating.</p>
+<h2 id="index.view.pugejshtml">index.view.(pug/ejs/html)</h2>
+<p>The view file is responsible for the presentation of your component. It is what is displayed to a client web browser or mobile device. Depending on the view engine of your choosing, server-side rendering as well as the index.config.json data is available to the view natively.</p>
+<h2 id="index.component.tsjs">index.component.(ts/js)</h2>
+<p>Principle TypeScript or JavaScript logic associated with your component. This is typically where Vue, React, Ember and the like logic is placed.</p>
+<h2 id="index.style.lesscsssassstylus">index.style.(less/css/sass/stylus)</h2>
+<p>Each component is capable of managing its own style requirements. Avian currently supports less, sass, stylus and of course css with no special configuration needs.</p>
+<h2 id="index.config.json">index.config.json</h2>
+<p>A useful configuration file that Avian exposes as a Rest service and even binds data to your view engine taking advantage of server-side rendering capabilities. Additionally, it is very useful as a simple data store for less complex websites that don’t require databases.</p>
+<h2 id="index.service.tsjs">index.service.(ts/js)</h2>
+<p>With a component service file you can easily extend your component to provide server side express routes beyond the scope of what Avian provides out of the box. This is far superior to the concept of client side routing, because with component service files you can execute server-side code, making them truly powerful.</p>
+<h2 id="index.doc.md">index.doc.md</h2>
+<p>This file that you’re reading here.</p>
+</body>
+</html>

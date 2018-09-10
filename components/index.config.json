@@ -1,18 +1,4 @@
 { "objects": [{
-    "navigation": [
-        {
-            "title": "Index",
-            "url": "/index"
-        },
-        {
-            "title": "Platform",
-            "url": "/platform"
-        },
-        {
-            "title": "Account",
-            "url": "/account"
-        }
-    ],
     "posts": [
         {
             "title": "Fusce ullamcorper tellus",

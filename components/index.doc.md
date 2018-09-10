@@ -1,31 +1,34 @@
-# Index Documentation
+% Index Component Documentation
 
-The Index component is the root entry point for any Avian application. This is especially handy for single page web applications.
+# Introduction
 
-## Synopsis
+Avian's Index component is the main entry point to your application. Every application requires its existence, and should be seen as the initial building block of any simple to large scale application. For single page applications, this is typically the only component your application will require. Avian generally supports your component files being written in the language of your choosing, with only a few known exceptions.
 
-Avian supports a few methods for launching your application and its components.
+# Component Files
 
-### Development
+Avian applications follow a component driven design pattern. The components themselves are modular in such a way where a developer can pick and choose which component files to leverage.can be comprised of any combination of the below mentioned supporting files depending on your needs and the kind of component you are creating.
 
-    avian --home /path/to/app --mode development
+## index.view.(pug/ejs/html)
 
-### Production
+The view file is responsible for the presentation of your component. It is what is displayed to a client web browser or mobile device. Depending on the view engine of your choosing, server-side rendering as well as the index.config.json data is available to the view natively.
 
-    avian --home /path/to/app --mode production --name iniquity-website --port 80
-
-## Component Files
-
-Avian applications strictly follow a component driven design pattern. As such, Avian components can be comprised of any combination of the below mentioned supporting files depending on your needs and the kind of component you are creating.
-
-### index.component.ts
+## index.component.(ts/js)
 
 Principle TypeScript or JavaScript logic associated with your component. This is typically where Vue, React, Ember and the like logic is placed.
 
-### index.style.less
+## index.style.(less/css/sass/stylus)
 
-Where component specific style customizations should be places.
+Each component is capable of managing its own style requirements. Avian currently supports less, sass, stylus and of course css with no special configuration needs.
 
-### index.config.json
+## index.config.json
 
-A useful configuration file that Avian exposes as a Rest service. Additionally, you can leverage serverside rendering from objects stored in this file. In fact, it is very useful as a simple data store for less complex websites that don't require databases.
+A useful configuration file that Avian exposes as a Rest service and even binds data to your view engine taking advantage of server-side rendering capabilities. Additionally, it is very useful as a simple data store for less complex websites that don't require databases.
+
+## index.service.(ts/js)
+
+With a component service file you can easily extend your component to provide server side express routes beyond the scope of what Avian provides out of the box. This is far superior to the concept of client side routing, because with component service files you can execute server-side code, making them truly powerful.
+
+## index.doc.md
+
+This file that you're reading here.
+
