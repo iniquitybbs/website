@@ -1,11 +1,10 @@
-# Index Component Documentation
+# Index Documentation
 
-This document describes how Avian's index component is structured.
+The Index component is the root entry point for any Avian application. This is especially handy for single page web applications.
 
 ## Synopsis
 
-Since the index component is the default component for any Avian application simply starting Avian
-will launch the index component.
+Avian supports a few methods for launching your application and its components.
 
 ### Development
 
@@ -17,7 +16,7 @@ will launch the index component.
 
 ## Component Files
 
-Avian applications follow the component design methodology.
+Avian applications strictly follow a component driven design pattern. As such, Avian components can be comprised of any combination of the below mentioned supporting files depending on your needs and the kind of component you are creating.
 
 ### index.component.ts
 
