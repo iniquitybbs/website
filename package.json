@@ -6,7 +6,8 @@
     "start": "node node_modules/.bin/concurrently -k --restart-tries 10 --raw \"yarn avian\"",
     "start-prod": "node node_modules/.bin/concurrently -k --restart-tries 25 --raw \"yarn avian\"",
     "avian": "node node_modules/.bin/avian",
-    "avian-prod": "node node_modules/.bin/avian --mode production --name iniquity-website --port 80"
+    "avian-prod": "node node_modules/.bin/avian --mode production --name iniquity-website --port 80",
+    "pandoc": "pandoc ./components/*.doc.md -s --toc -c /assets/css/pandoc.css --title 'Index Documentation' --from markdown --to html5 -o ./public/index.doc.html"
   },
   "repository": {
     "type": "git",
