@@ -8,11 +8,11 @@ A retro style website for publishing project updates about the Iniquity BBS.
 
 ## Documentation
 
-    https://github.com/iniquitybbs/iniquity-website/docs/
+https://github.com/iniquitybbs/website/docs/index.doc.html
 
 ## Issues
 
-    https://github.com/iniquitybbs/website/issues
+https://github.com/iniquitybbs/website/issues
 ## License
 
 MIT
