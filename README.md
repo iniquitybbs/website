@@ -2,23 +2,9 @@
 
 A retro style website for publishing project updates about the Iniquity BBS.
 
-# Synopsis
+# Documentation
 
-## Installation
-
-    yarn install
-
-## Avian Development Mode
-
-    avian --home /path/to/app --mode development
-
-## Avian Production Mode
-
-    avian --home /path/to/app --mode production --name iniquity-website --port 80
-
-# Developer Documentation
-
-http://localhost:8080/index.doc.html
+https://github.com/iniquitybbs/website/docs/README.md
 
 # Issues
 
