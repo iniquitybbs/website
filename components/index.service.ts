@@ -1,8 +1,8 @@
 
 const index = require("express").Router()
 
-index.get("/test", (req, res) => {
-    res.json({success: true})
+index.get("/docs", (req, res) => {
+    res.sendFile("/public/index.doc.html")
 })
 
 export default index
