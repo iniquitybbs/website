@@ -25,6 +25,8 @@
     "axios": "^0.18.0",
     "concurrently": "^4.0.1",
     "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-table-of-contents": "^0.4.3",
     "vue": "^2.5.17",
     "vuetify": "^1.2.3"
   }
