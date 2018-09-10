@@ -1,17 +1,12 @@
-# The Iniquity BBS Project Website
+# The Iniquity BBS Website
 
-A retro style website for publishing project updates about the Iniquity BBS.
-
+An IBM terminal inspired website for publishing Iniquity BBS project updates.
 # Documentation
 
-https://github.com/iniquitybbs/website/docs/README.md
-
+https://github.com/iniquitybbs/website/blob/master/docs/README.md
 # Issues
 
 https://github.com/iniquitybbs/website/issues
-
-# Authors
-Dan Stephenson (ispyhumanfly)
 
 # License
 
